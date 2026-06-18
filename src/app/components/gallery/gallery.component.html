@@ -1,0 +1,22 @@
+<section id="obras" class="gallery">
+  <p class="label">Explora mi trabajo</p>
+  <h2>Obras seleccionadas</h2>
+
+  <div class="filters">
+    <button *ngFor="let filter of filters" [class.active]="activeFilter === filter" (click)="setFilter(filter)">{{ filter }}</button>
+  </div>
+
+  <div class="grid">
+    <article class="card" *ngFor="let work of filteredWorks" (click)="openWork(work)">
+      <img [src]="work.image" [alt]="work.title">
+      <div class="overlay"></div>
+      <div class="info">
+        <span>{{ work.category }} · {{ work.year }}</span>
+        <h3>{{ work.title }}</h3>
+        <p>{{ work.technique }}</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<app-work-modal *ngIf="selectedWork" [work]="selectedWork" (closed)="closeModal()"></app-work-modal>

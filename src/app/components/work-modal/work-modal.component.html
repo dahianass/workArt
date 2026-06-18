@@ -1,0 +1,12 @@
+<div class="backdrop" (click)="closed.emit()">
+  <article class="modal" (click)="$event.stopPropagation()">
+    <button class="close" (click)="closed.emit()">×</button>
+    <img [src]="work.image" [alt]="work.title">
+    <div class="content">
+      <span>{{ work.category }} · {{ work.year }}</span>
+      <h2>{{ work.title }}</h2>
+      <p class="technique">{{ work.technique }}</p>
+      <p>{{ work.description }}</p>
+    </div>
+  </article>
+</div>
