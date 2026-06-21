@@ -19,7 +19,7 @@ h1 span { color: var(--purple-light); }
 .btn:hover { background: var(--purple); transform: translateY(-4px); box-shadow: 0 18px 40px rgba(181,108,255,.28); }
 .visual { position: relative; min-height: 610px; }
 .glow { position: absolute; inset: 8% 6%; border-radius: 50%; background: radial-gradient(circle, rgba(181,108,255,.45), transparent 60%); filter: blur(18px); animation: float 7s ease-in-out infinite; }
-.portrait { position: absolute; inset: 2% 0 0 10%; background: linear-gradient(90deg, rgba(8,5,13,.2), rgba(8,5,13,.85)), url('https://images.unsplash.com/photo-1541961017774-22349e4a1262?auto=format&fit=crop&w=1200&q=80'); background-size: cover; background-position: center; border: 1px solid var(--border); box-shadow: var(--shadow); clip-path: polygon(6% 0, 100% 0, 92% 100%, 0 92%); }
+.portrait { position: absolute; inset: 2% 0 0 10%;top:-27%; background: linear-gradient(90deg, rgba(8,5,13,0)), url('/assets/images/SinFondo.png?auto=format&fit=crop&w=1200&q=80'); background-size: cover; background-position: center; border: 0px solid var(--border); clip-path: polygon(6% 0, 100% 0, 92% 100%, 0 100%); }
 .gold-splash { position: absolute; width: 280px; height: 360px; right: 48%; top: 22%; background: radial-gradient(circle, rgba(214,168,92,.75), transparent 62%); filter: blur(9px); mix-blend-mode: screen; opacity: .8; }
 @keyframes float { 0%,100%{transform:translateY(0) scale(1)} 50%{transform:translateY(-22px) scale(1.04)} }
 @media (max-width: 900px) { .hero { grid-template-columns: 1fr; padding: 60px 24px; } .visual { min-height: 420px; } }
